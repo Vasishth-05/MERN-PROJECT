@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon Backend/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vasishth-05/MERN-PROJECT.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
