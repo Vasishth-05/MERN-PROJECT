@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api/products/:id', router)
+app.use('/api/products', router)
 
 
 app.listen(process.env.PORT, () => {
