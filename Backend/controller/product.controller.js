@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
+import mongoose, { get } from 'mongoose';
 import Product from '../models/product.model.js'
 
-const getProducts =  async (req,res) => {
+export const getProducts =  async (req,res) => {
 
     try {
         const products = await Product.find({});
@@ -12,7 +12,7 @@ const getProducts =  async (req,res) => {
     }
 }
 
-const postProducts = async (req,res) => {
+export const postProducts = async (req,res) => {
     const product = req.body;
     
     if(!product.name || !product.price || !product.image){
@@ -34,7 +34,7 @@ const postProducts = async (req,res) => {
     }
 }
 
-const updateProduct = async (req,res) => {
+export const updateProducts = async (req,res) => {
 
     const {id} = req.params;
     const product = req.body;
@@ -52,7 +52,7 @@ const updateProduct = async (req,res) => {
     }
 }
 
-const deleteProduct = async (req,res) => {
+export const deleteProducts = async (req,res) => {
     const deleteProduct = Product.findById(req.params.id)
 
     try {
@@ -64,5 +64,3 @@ const deleteProduct = async (req,res) => {
     }
 }
 
-
-export default {getProducts,postProducts,updateProduct,deleteProduct}
