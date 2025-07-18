@@ -3,8 +3,12 @@ import './App.css'
 function App() {
 
   return (
-    <Box>
-
+    <Box minH={"100vh"}>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/create' element={<CreatePage/>}/>
+      </Routes>
     </Box>
       
   )
